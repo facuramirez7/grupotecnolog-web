@@ -10,6 +10,16 @@ Options -Indexes
 </FilesMatch>
 RedirectMatch 404 /\.git
 
+# HTTPS sin www (coincide con la URL canónica) y URLs viejas de WordPress → home
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://grupotecnolog.com%{REQUEST_URI} [R=301,L]
+  RewriteRule ^(portfolios|folio_cat|category|tag|author|feed|comments|page|wp-content/uploads)(/|$) / [R=301,L]
+  RewriteRule ^(wp-login\.php|wp-admin|wp-includes|wp-json|xmlrpc\.php|readme\.html)(/|$) - [R=410,L]
+</IfModule>
+
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/manifest+json text/plain application/xml
 </IfModule>
