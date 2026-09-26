@@ -1,0 +1,14 @@
+{
+  "name": "Grupo Tecnolog",
+  "short_name": "Tecnolog",
+  "description": "Centrífugas, decanters y servicios metalúrgicos para bodegas. Distribuidor oficial GEA en Mendoza.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#fef9ef",
+  "theme_color": "#fef9ef",
+  "lang": "es-AR",
+  "icons": [
+    { "src": "assets/logos/favicon-64.png", "sizes": "64x64", "type": "image/png" },
+    { "src": "assets/logos/favicon-300.png", "sizes": "300x300", "type": "image/png" }
+  ]
+}
