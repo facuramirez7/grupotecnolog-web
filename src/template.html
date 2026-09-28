@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="{{lang.code}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{meta.title}}</title>
+  <meta name="description" content="{{meta.description|attr}}">
+  <meta name="keywords" content="{{meta.keywords|attr}}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Grupo Tecnolog">
+  <meta name="geo.region" content="AR-M">
+  <meta name="geo.placename" content="Luján de Cuyo, Mendoza">
+  <meta name="theme-color" content="#323435">
+  <link rel="canonical" href="{{lang.url}}">
+  <link rel="alternate" hreflang="es" href="https://grupotecnolog.com/">
+  <link rel="alternate" hreflang="en" href="https://grupotecnolog.com/en/">
+  <link rel="alternate" hreflang="pt-BR" href="https://grupotecnolog.com/pt/">
+  <link rel="alternate" hreflang="x-default" href="https://grupotecnolog.com/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="{{lang.og}}">
+  <meta property="og:site_name" content="Grupo Tecnolog">
+  <meta property="og:url" content="{{lang.url}}">
+  <meta property="og:title" content="{{meta.og_title|attr}}">
+  <meta property="og:description" content="{{meta.og_description|attr}}">
+  <meta property="og:image" content="https://grupotecnolog.com/assets/img/centrifuga-gea-bodega.jpg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="1066">
+  <meta property="og:image:alt" content="{{meta.og_image_alt|attr}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{meta.og_title|attr}}">
+  <meta name="twitter:description" content="{{meta.twitter_description|attr}}">
+  <meta name="twitter:image" content="https://grupotecnolog.com/assets/img/centrifuga-gea-bodega.jpg">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/logos/favicon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="/assets/logos/favicon-300.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/barlow-condensed-700.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-400.woff2" crossorigin>
+  <style>
+{{css}}
+  </style>
+
+  <!-- Datos estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "Organization"],
+        "@id": "https://grupotecnolog.com/#organization",
+        "name": "Grupo Tecnolog",
+        "legalName": "Grupo Tecnolog",
+        "url": "https://grupotecnolog.com/",
+        "logo": "https://grupotecnolog.com/assets/logos/grupo-tecnolog-logo.png",
+        "image": "https://grupotecnolog.com/assets/img/centrifuga-gea-bodega.jpg",
+        "description": "{{ld.description|json}}",
+        "slogan": "{{ld.slogan|json}}",
+        "telephone": "+54 9 261 277-0017",
+        "email": "administracion@grupotecnolog.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "San Martín 1652",
+          "addressLocality": "Luján de Cuyo",
+          "addressRegion": "Mendoza",
+          "postalCode": "M5507",
+          "addressCountry": "AR"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": -33.0241911, "longitude": -68.8743517 },
+        "hasMap": "{{const.maps_place}}",
+        "areaServed": [
+          { "@type": "State", "name": "Mendoza" },
+          { "@type": "Country", "name": "Argentina" }
+        ],
+        "knowsAbout": [{{ld.knows_about|jsonlist}}],
+        "brand": { "@type": "Brand", "name": "GEA", "url": "{{lang.gea_url}}" },
+        "sameAs": ["https://www.linkedin.com/company/grupotecnolog", "{{const.maps_place}}"],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+54 9 261 277-0017",
+          "contactType": "sales",
+          "availableLanguage": ["es", "en", "pt"],
+          "areaServed": "AR"
+        }],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "{{ld.catalog_name|json}}",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "{{ld.offer1|json}}", "serviceType": "{{ld.offer1_type|json}}" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "{{ld.offer2|json}}", "serviceType": "{{ld.offer2_type|json}}" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "{{ld.offer3|json}}", "serviceType": "{{ld.offer3_type|json}}" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "{{ld.offer4|json}}", "serviceType": "{{ld.offer3_type|json}}" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "{{ld.offer5|json}}", "serviceType": "{{ld.offer5_type|json}}" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "{{ld.offer6|json}}", "serviceType": "{{ld.offer6_type|json}}" } }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://grupotecnolog.com/#website",
+        "url": "https://grupotecnolog.com/",
+        "name": "Grupo Tecnolog",
+        "inLanguage": ["es", "en", "pt-BR"],
+        "publisher": { "@id": "https://grupotecnolog.com/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "{{lang.url}}#webpage",
+        "url": "{{lang.url}}",
+        "name": "{{meta.title|json}}",
+        "isPartOf": { "@id": "https://grupotecnolog.com/#website" },
+        "about": { "@id": "https://grupotecnolog.com/#organization" },
+        "inLanguage": "{{lang.in_language}}",
+        "primaryImageOfPage": "https://grupotecnolog.com/assets/img/centrifuga-gea-bodega.jpg"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">{{a11y.skip}}</a>
+
+  <!-- 1 · Header -->
+  <div class="announcement" role="region" aria-label="{{a11y.announcement|attr}}">
+    <p>{{announcement.text}} <a href="https://wa.me/5492612770017?text={{wa.availability|url}}" target="_blank" rel="noopener">{{announcement.link}}</a></p>
+  </div>
+
+  <header class="site-header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="{{a11y.brand|attr}}">
+        <img src="/assets/logos/grupo-tecnolog-logo.webp" alt="Grupo Tecnolog" width="400" height="123">
+      </a>
+      <nav class="site-nav" aria-label="{{a11y.nav_main|attr}}">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="{{a11y.menu_open|attr}}" data-open="{{a11y.menu_open|attr}}" data-close="{{a11y.menu_close|attr}}">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="menu" class="menu">
+          <li><a href="#inicio">{{nav.home}}</a></li>
+          <li><a href="#nosotros">{{nav.about}}</a></li>
+          <li><a href="#servicios">{{nav.services}}</a></li>
+          <li><a href="#proyectos">{{nav.work}}</a></li>
+          <li><a href="#clientes">{{nav.clients}}</a></li>
+          <li><a href="#contacto">{{nav.contact}}</a></li>
+          <li class="lang-switch">
+            <a href="/" hreflang="es" lang="es" class="{{switch.es}}" aria-label="Español">ES</a>
+            <a href="/en/" hreflang="en" lang="en" class="{{switch.en}}" aria-label="English">EN</a>
+            <a href="/pt/" hreflang="pt-BR" lang="pt-BR" class="{{switch.pt}}" aria-label="Português">PT</a>
+          </li>
+          <li class="menu-cta"><a class="btn btn-primary" href="https://wa.me/5492612770017?text={{wa.general|url}}" target="_blank" rel="noopener">{{nav.cta}}</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- 2 · Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">{{hero.eyebrow}}</p>
+          <h1 id="hero-title">{{hero.title}}</h1>
+          <p class="hero-sub">{{hero.sub}}</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5492612770017?text={{wa.quote|url}}" target="_blank" rel="noopener">{{hero.cta_primary}}</a>
+            <a class="btn btn-outline" href="#servicios">{{hero.cta_secondary}}</a>
+          </div>
+          <ul class="tag-list" aria-label="{{a11y.values|attr}}">
+            <li>{{values.v1}}</li>
+            <li>{{values.v2}}</li>
+            <li>{{values.v3}}</li>
+          </ul>
+        </div>
+        <figure class="hero-media">
+          <video class="hero-video" muted loop playsinline preload="none" poster="/assets/img/centrifuga-gea-bodega-poster.webp" aria-label="{{hero.video_label|attr}}">
+            <source src="/assets/video/gt-hero-loop.webm" type="video/webm">
+          </video>
+          <figcaption>{{hero.caption}}</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3 · Nosotros -->
+    <section class="section" id="nosotros" aria-labelledby="nosotros-title">
+      <div class="container split">
+        <div class="split-media">
+          <figure class="photo-card photo-main">
+            <img src="/assets/img/equipo-grupo-tecnolog-mendoza-800.webp" srcset="/assets/img/equipo-grupo-tecnolog-mendoza-800.webp 800w, /assets/img/equipo-grupo-tecnolog-mendoza-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 540px" alt="{{about.photo_alt|attr}}" width="1200" height="685" loading="lazy">
+          </figure>
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">{{about.eyebrow}}</p>
+          <h2 id="nosotros-title">{{about.title}}</h2>
+          <p class="lead">{{about.lead}}</p>
+          <h3>{{about.subtitle}}</h3>
+          <p>{{about.text_before_gea}} <a href="{{lang.gea_url}}" target="_blank" rel="noopener">GEA</a> {{about.text_after_gea}}</p>
+          <ul class="values">
+            <li>
+              <strong>{{values.v1}}</strong>
+              <span>{{values.v1_text}}</span>
+            </li>
+            <li>
+              <strong>{{values.v2}}</strong>
+              <span>{{values.v2_text}}</span>
+            </li>
+            <li>
+              <strong>{{values.v3}}</strong>
+              <span>{{values.v3_text}}</span>
+            </li>
+          </ul>
+          <a class="btn btn-outline" href="#servicios">{{about.cta}}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · Servicios -->
+    <section class="section section-alt" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">{{services.eyebrow}}</p>
+          <h2 id="servicios-title">{{services.title}}</h2>
+          <p class="lead">{{services.lead}}</p>
+        </div>
+
+        <div class="cards-3">
+          <article class="step-card">
+            <p class="step-num">01</p>
+            <h3>{{services.c1_title}}</h3>
+            <p>{{services.c1_text}}</p>
+            <ul class="check-list">
+              <li>{{services.c1_i1}}</li>
+              <li>{{services.c1_i2}}</li>
+              <li>{{services.c1_i3}}</li>
+              <li>{{services.c1_i4}}</li>
+            </ul>
+          </article>
+
+          <article class="step-card step-card-dark">
+            <p class="step-num">02 · {{services.c2_tag}}</p>
+            <h3>{{services.c2_title}}</h3>
+            <p>{{services.c2_text}}</p>
+            <ul class="check-list">
+              <li>{{services.c2_i1}}</li>
+              <li>{{services.c2_i2}}</li>
+              <li>{{services.c2_i3}}</li>
+              <li>{{services.c2_i4}}</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/5492612770017?text={{wa.support|url}}" target="_blank" rel="noopener">{{services.c2_cta}}</a>
+          </article>
+
+          <article class="step-card">
+            <p class="step-num">03</p>
+            <h3>{{services.c3_title}}</h3>
+            <p>{{services.c3_text}}</p>
+            <ul class="check-list">
+              <li>{{services.c3_i1}}</li>
+              <li>{{services.c3_i2}}</li>
+              <li>{{services.c3_i3}}</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="metal-split gea-split" id="decanters">
+          <div class="video-facade-wrap">
+            <button class="video-facade" type="button" data-yt="TZMTGBaIxv8" aria-label="{{decanter.video_label|attr}}">
+              <img src="/assets/img/decanter-gea-vino-video.webp" alt="{{decanter.video_alt|attr}}" width="960" height="540" loading="lazy">
+              <span class="play" aria-hidden="true"></span>
+              <span class="video-caption">{{decanter.video_caption}}</span>
+            </button>
+          </div>
+          <div class="metal-copy">
+            <p class="mono-label">{{decanter.label}}</p>
+            <h3>{{decanter.title}}</h3>
+            <p>{{decanter.text}}</p>
+            <ul class="tag-list" aria-label="{{a11y.decanter_apps|attr}}">
+              <li>{{decanter.t1}}</li>
+              <li>{{decanter.t2}}</li>
+              <li>{{decanter.t3}}</li>
+              <li>{{decanter.t4}}</li>
+              <li>{{decanter.t5}}</li>
+            </ul>
+            <a class="btn btn-outline" href="https://wa.me/5492612770017?text={{wa.decanter|url}}" target="_blank" rel="noopener">{{decanter.cta}}</a>
+          </div>
+        </div>
+
+        <div class="metal-split" id="metalurgica">
+          <figure class="photo-card metal-photo">
+            <img src="/assets/img/fabricacion-metalurgica-pasarela-800.webp" srcset="/assets/img/fabricacion-metalurgica-pasarela-800.webp 800w, /assets/img/fabricacion-metalurgica-pasarela-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 480px" alt="{{metal.photo_alt|attr}}" width="1200" height="772" loading="lazy">
+          </figure>
+          <div class="metal-copy">
+            <p class="mono-label">{{metal.label}}</p>
+            <h3>{{metal.title}}</h3>
+            <p>{{metal.text}}</p>
+            <ul class="tag-list" aria-label="{{a11y.metal_tags|attr}}">
+              <li>{{metal.t1}}</li>
+              <li>{{metal.t2}}</li>
+              <li>{{metal.t3}}</li>
+              <li>{{metal.t4}}</li>
+              <li>{{metal.t5}}</li>
+              <li>{{metal.t6}}</li>
+            </ul>
+            <a class="btn btn-outline" href="https://wa.me/5492612770017?text={{wa.metal|url}}" target="_blank" rel="noopener">{{metal.cta}}</a>
+          </div>
+        </div>
+
+        <div class="applications">
+          <p class="applications-label">{{apps.label}}</p>
+          <ul class="tag-list" aria-label="{{a11y.apps|attr}}">
+            <li>{{apps.a1}}</li>
+            <li>{{apps.a2}}</li>
+            <li>{{apps.a3}}</li>
+            <li>{{apps.a4}}</li>
+            <li>{{apps.a5}}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · Trabajos -->
+    <section class="section" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">{{work.eyebrow}}</p>
+          <h2 id="proyectos-title">{{work.title}}</h2>
+          <p class="lead">{{work.lead}}</p>
+        </div>
+        <div class="cards-3 projects">
+          <article class="project-card">
+            <figure>
+              <img src="/assets/img/caneria-acero-inoxidable-bodega-800.webp" srcset="/assets/img/caneria-acero-inoxidable-bodega-800.webp 800w, /assets/img/caneria-acero-inoxidable-bodega-1200.webp 1200w" sizes="(max-width: 1024px) 100vw, 370px" alt="{{work.p1_alt|attr}}" width="1200" height="1600" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <p class="mono-label">{{work.p1_label}}</p>
+              <h3>{{work.p1_title}}</h3>
+              <p>{{work.p1_text}}</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <figure>
+              <img src="/assets/img/centrifuga-separadora-vino-800.webp" srcset="/assets/img/centrifuga-separadora-vino-800.webp 800w, /assets/img/centrifuga-separadora-vino-1200.webp 1200w" sizes="(max-width: 1024px) 100vw, 370px" alt="{{work.p2_alt|attr}}" width="1200" height="859" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <p class="mono-label">{{work.p2_label}}</p>
+              <h3>{{work.p2_title}}</h3>
+              <p>{{work.p2_text}}</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <figure>
+              <img src="/assets/img/intercambiador-frio-calor-acero-inoxidable-800.webp" srcset="/assets/img/intercambiador-frio-calor-acero-inoxidable-800.webp 800w, /assets/img/intercambiador-frio-calor-acero-inoxidable-1200.webp 1200w" sizes="(max-width: 1024px) 100vw, 370px" alt="{{work.p3_alt|attr}}" width="1200" height="1106" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <p class="mono-label">{{work.p3_label}}</p>
+              <h3>{{work.p3_title}}</h3>
+              <p>{{work.p3_text}}</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · Números -->
+    <section class="section section-dark" id="numeros" aria-labelledby="numeros-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">{{stats.eyebrow}}</p>
+          <h2 id="numeros-title">{{stats.title}}</h2>
+          <p class="lead">{{stats.lead}}</p>
+        </div>
+        <dl class="stats" data-locale="{{lang.locale}}">
+          <div class="stat">
+            <dt>{{stats.s1}}</dt>
+            <dd><span class="count" data-count="34">34</span></dd>
+          </div>
+          <div class="stat">
+            <dt>{{stats.s2}}</dt>
+            <dd><span class="count" data-count="126">126</span></dd>
+          </div>
+          <div class="stat">
+            <dt>{{stats.s3}}</dt>
+            <dd><span class="count" data-count="9774">{{stats.s3_value}}</span></dd>
+          </div>
+          <div class="stat">
+            <dt>{{stats.s4}}</dt>
+            <dd><span class="count" data-count="267">267</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 7 · Clientes -->
+    <section class="section" id="clientes" aria-labelledby="clientes-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">{{clients.eyebrow}}</p>
+          <h2 id="clientes-title">{{clients.title}}</h2>
+          <p class="lead">{{clients.lead}}</p>
+        </div>
+        <p class="clients-note">{{clients.note}}</p>
+        <ul class="logo-grid" aria-label="{{a11y.clients|attr}}">
+          <li><a href="https://www.chandon.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/chandon.webp" alt="Chandon Argentina" width="195" height="120" loading="lazy"></a></li>
+          <li><a href="https://toro.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/toro.webp" alt="Bodega Toro" width="124" height="31" loading="lazy"></a></li>
+          <li><a href="https://www.norton.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/norton.webp" alt="Bodega Norton" width="210" height="120" loading="lazy"></a></li>
+          <li><a href="https://www.bodegasesmeralda.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/bodegas-esmeralda.webp" alt="Bodegas Esmeralda" width="202" height="50" loading="lazy"></a></li>
+          <li><a href="https://www.lagarde.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/lagarde.webp" alt="Bodega Lagarde" width="241" height="120" loading="lazy"></a></li>
+          <li><a href="https://domainebousquet.com/" target="_blank" rel="noopener"><img src="/assets/logos/domaine-bousquet.webp" alt="Domaine Bousquet" width="223" height="120" loading="lazy"></a></li>
+          <li><a href="https://www.bodegaseptima.com/" target="_blank" rel="noopener"><img src="/assets/logos/bodega-septima.webp" alt="Bodega Séptima" width="198" height="120" loading="lazy"></a></li>
+          <li><a href="https://www.bodegasottano.com/" target="_blank" rel="noopener"><img src="/assets/logos/bodega-sottano.webp" alt="Bodega Sottano" width="121" height="120" loading="lazy"></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8 · Contacto -->
+    <section class="section" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="contact-intro">
+          <p class="tagline">{{contact.tagline}}</p>
+          <aside class="vendimia-card" aria-labelledby="vendimia-title">
+            <p class="mono-label">{{harvest.label}}</p>
+            <h3 id="vendimia-title">{{harvest.title}}</h3>
+            <p>{{harvest.text}}</p>
+            <ul class="check-list">
+              <li>{{harvest.i1}}</li>
+              <li>{{harvest.i2}}</li>
+              <li>{{harvest.i3}}</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/5492612770017?text={{wa.harvest|url}}" target="_blank" rel="noopener">{{harvest.cta}}</a>
+          </aside>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <p class="eyebrow">{{contact.eyebrow}}</p>
+            <h2 id="contacto-title">{{contact.title}}</h2>
+            <p class="lead">{{contact.lead}}</p>
+            <ul class="contact-list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+                <a href="tel:+5492612770017">+54 9 2612 77-0017</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                <a href="mailto:administracion@grupotecnolog.com">administracion@grupotecnolog.com</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <address>San Martín 1652, M5507 Luján de Cuyo, Mendoza, Argentina</address>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-1.7-1-1 .8a4 4 0 0 1-2.5-2.5l.8-1-1-1.7z"/></svg>
+                <a href="https://wa.me/5492612770017?text={{wa.general|url}}" target="_blank" rel="noopener">{{contact.whatsapp}}</a>
+              </li>
+            </ul>
+            <a class="link-map" href="{{const.maps_place|attr}}" target="_blank" rel="noopener">{{contact.directions}}</a>
+            <div class="map-embed">
+              <iframe src="https://www.google.com/maps?q=GRUPO+TECNOLOG+SA%2C+San+Mart%C3%ADn+1652%2C+Luj%C3%A1n+de+Cuyo%2C+Mendoza&amp;z=17&amp;hl={{lang.hl}}&amp;output=embed" title="{{contact.map_title|attr}}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <form class="contact-form" id="form-contacto" action="https://wa.me/5492612770017" method="get" novalidate data-wa-intro="{{wa.form_intro|attr}}" data-l-name="{{form.name|attr}}" data-l-company="{{form.company_short|attr}}" data-l-email="{{form.email|attr}}" data-l-phone="{{form.phone|attr}}" data-l-interest="{{form.interest|attr}}" data-l-message="{{form.message|attr}}">
+            <div class="field">
+              <label for="f-nombre">{{form.name}}</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" required maxlength="80" placeholder="{{form.name_ph|attr}}">
+            </div>
+            <div class="field">
+              <label for="f-bodega">{{form.company}}</label>
+              <input id="f-bodega" name="empresa" type="text" autocomplete="organization" maxlength="80" placeholder="{{form.company_ph|attr}}">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-email">{{form.email}}</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="{{form.email_ph|attr}}">
+              </div>
+              <div class="field">
+                <label for="f-tel">{{form.phone}}</label>
+                <input id="f-tel" name="telefono" type="tel" autocomplete="tel" maxlength="30" placeholder="{{form.phone_ph|attr}}">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-interes">{{form.interest}}</label>
+              <select id="f-interes" name="interes">
+                <option>{{form.o1}}</option>
+                <option>{{form.o2}}</option>
+                <option>{{form.o3}}</option>
+                <option>{{form.o4}}</option>
+                <option>{{form.o5}}</option>
+                <option>{{form.o6}}</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-msg">{{form.message}}</label>
+              <textarea id="f-msg" name="mensaje" rows="4" maxlength="600" placeholder="{{form.message_ph|attr}}"></textarea>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">{{form.submit}}</button>
+            <p class="form-hint">{{form.hint}} <a href="mailto:administracion@grupotecnolog.com">administracion@grupotecnolog.com</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9 · Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logos/grupo-tecnolog-logo.webp" alt="Grupo Tecnolog" width="400" height="123" loading="lazy">
+        <p>{{footer.about_before_gea}} <a href="{{lang.gea_url}}" target="_blank" rel="noopener">GEA</a> {{footer.about_after_gea}}</p>
+        <nav class="footer-lang" aria-label="{{a11y.language|attr}}">
+          <a href="/" hreflang="es" lang="es" class="{{switch.es}}">Español</a>
+          <a href="/en/" hreflang="en" lang="en" class="{{switch.en}}">English</a>
+          <a href="/pt/" hreflang="pt-BR" lang="pt-BR" class="{{switch.pt}}">Português</a>
+        </nav>
+      </div>
+      <nav class="footer-nav" aria-label="{{a11y.nav_footer|attr}}">
+        <p class="footer-title">{{footer.sections}}</p>
+        <ul>
+          <li><a href="#nosotros">{{nav.about}}</a></li>
+          <li><a href="#servicios">{{nav.services}}</a></li>
+          <li><a href="#proyectos">{{nav.work}}</a></li>
+          <li><a href="#clientes">{{nav.clients}}</a></li>
+          <li><a href="#contacto">{{nav.contact}}</a></li>
+        </ul>
+      </nav>
+      <div class="footer-services">
+        <p class="footer-title">{{footer.services}}</p>
+        <ul>
+          <li><a href="#servicios">{{footer.s1}}</a></li>
+          <li><a href="#decanters">{{footer.s2}}</a></li>
+          <li><a href="#servicios">{{footer.s3}}</a></li>
+          <li><a href="#servicios">{{footer.s4}}</a></li>
+          <li><a href="#metalurgica">{{footer.s5}}</a></li>
+          <li><a href="#metalurgica">{{footer.s6}}</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <p class="footer-title">{{footer.contact}}</p>
+        <ul>
+          <li><a href="tel:+5492612770017">+54 9 2612 77-0017</a></li>
+          <li><a href="mailto:administracion@grupotecnolog.com">administracion@grupotecnolog.com</a></li>
+          <li>San Martín 1652, M5507 Luján de Cuyo, Mendoza</li>
+          <li><a href="https://www.linkedin.com/company/grupotecnolog" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="anio">2026</span> Grupo Tecnolog. {{footer.rights}}</p>
+      <p>Luján de Cuyo · Mendoza · Argentina</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5492612770017?text={{wa.general|url}}" target="_blank" rel="noopener" aria-label="{{contact.whatsapp|attr}}">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-1.7-1-1 .8a4 4 0 0 1-2.5-2.5l.8-1-1-1.7z"/></svg>
+  </a>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -17,7 +17,7 @@
     toggle.addEventListener('click', function () {
       var open = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!open));
-      toggle.setAttribute('aria-label', open ? 'Abrir menú' : 'Cerrar menú');
+      toggle.setAttribute('aria-label', open ? toggle.getAttribute('data-open') : toggle.getAttribute('data-close'));
       menu.classList.toggle('is-open', !open);
     });
     menu.addEventListener('click', function (e) {
@@ -47,7 +47,9 @@
 
   // Contadores de la sección Números
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var fmt = function (n) { return n.toLocaleString('es-AR'); };
+  var statsEl = document.querySelector('.stats');
+  var locale = (statsEl && statsEl.getAttribute('data-locale')) || document.documentElement.lang || 'es-AR';
+  var fmt = function (n) { return n.toLocaleString(locale); };
   var animate = function (el) {
     var target = parseInt(el.getAttribute('data-count'), 10);
     var start = null, dur = 1400;
@@ -95,14 +97,15 @@
       e.preventDefault();
       if (!form.reportValidity()) return;
       var v = function (id) { return (document.getElementById(id).value || '').trim(); };
+      var l = function (name) { return form.getAttribute('data-l-' + name) || name; };
       var lines = [
-        'Hola! Vengo desde la página y quería hacer una consulta.',
-        'Nombre: ' + v('f-nombre'),
-        v('f-bodega') ? 'Bodega/Empresa: ' + v('f-bodega') : '',
-        'Email: ' + v('f-email'),
-        v('f-tel') ? 'Teléfono: ' + v('f-tel') : '',
-        'Me interesa: ' + v('f-interes'),
-        v('f-msg') ? 'Mensaje: ' + v('f-msg') : ''
+        form.getAttribute('data-wa-intro') || '',
+        l('name') + ': ' + v('f-nombre'),
+        v('f-bodega') ? l('company') + ': ' + v('f-bodega') : '',
+        l('email') + ': ' + v('f-email'),
+        v('f-tel') ? l('phone') + ': ' + v('f-tel') : '',
+        l('interest') + ': ' + v('f-interes'),
+        v('f-msg') ? l('message') + ': ' + v('f-msg') : ''
       ].filter(Boolean);
       var url = 'https://wa.me/5492612770017?text=' + encodeURIComponent(lines.join('\n'));
       window.open(url, '_blank', 'noopener');

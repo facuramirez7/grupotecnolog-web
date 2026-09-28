@@ -10,10 +10,25 @@ python3 serve.py 8765
 
 Abrí <http://127.0.0.1:8765>. `serve.py` es un servidor estático con soporte de `Range`, necesario para que el video del hero cargue en Chrome y Safari (el `http.server` estándar no lo soporta y el video no reproduce).
 
+## Idiomas y build
+
+El sitio se genera en tres idiomas desde una plantilla:
+
+```
+src/template.html   plantilla HTML con marcadores {{clave}}
+src/styles.css      CSS (se inlina en cada página)
+i18n/es.json        textos en español (URL /)
+i18n/en.json        textos en inglés (URL /en/)
+i18n/pt.json        textos en portugués de Brasil (URL /pt/)
+build.py            genera index.html, en/index.html, pt/index.html y sitemap.xml
+```
+
+**Para cambiar cualquier texto o estilo: editar `src/` o `i18n/` y correr `python3 build.py`. Nunca editar los HTML generados.** Las tres páginas se enlazan con `hreflang` (es, en, pt-BR, x-default) y el sitemap lista las tres URLs.
+
 ## Estructura
 
-- `index.html` — página única con 9 secciones: header, hero, nosotros, servicios, proyectos, números, clientes, contacto y footer.
-- El CSS va inline en el `<style>` de `index.html` (tokens y componentes del design system brutalista con la paleta de GT). Se inlinó a propósito: elimina el único recurso que bloqueaba el render y da 100 en PageSpeed.
+- `index.html`, `en/index.html`, `pt/index.html` — páginas generadas (9 secciones: header, hero, nosotros, servicios, trabajos, números, clientes, contacto y footer).
+- El CSS (`src/styles.css`) va inline en el `<style>` de cada página (tokens y componentes del design system brutalista con la paleta de GT). Se inlinó a propósito: elimina el único recurso que bloqueaba el render y da 100 en PageSpeed.
 - `assets/fonts/` — Barlow Condensed, Inter (variable) y JetBrains Mono autoalojadas en woff2.
 - `.htaccess` — compresión, caché de un año para estáticos y cabeceras de seguridad (Apache).
 - `assets/js/main.js` — menú mobile, link activo, contadores, reveal y formulario → WhatsApp.
