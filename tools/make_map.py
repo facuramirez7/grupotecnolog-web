@@ -5,16 +5,17 @@ import json, math, sys, os
 
 SRC = sys.argv[1]
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets', 'img', 'clients-map.svg')
-LON0, LON1, LAT0, LAT1 = -72.4, -59.0, -37.2, -22.0   # recorte: oeste y norte argentino, de Mendoza a Jujuy
+LON0, LON1, LAT0, LAT1 = -72.4, -59.0, -41.6, -22.0   # recorte: oeste y norte argentino, de Mendoza a Jujuy
 W = 620.0
-HIGHLIGHT = {'Mendoza': 'a', 'San Juan': 'b', 'La Rioja': 'b', 'Catamarca': 'c', 'Salta': 'c'}
-LABELS = {'Mendoza': (-70.3, -35.7), 'San Juan': (-70.0, -30.3), 'La Rioja': (-65.9, -29.9), 'Catamarca': (-65.9, -27.7), 'Salta': (-64.3, -25.2)}
+HIGHLIGHT = {'Mendoza': 'a', 'San Juan': 'b', 'La Rioja': 'b', 'Catamarca': 'c', 'Salta': 'c', 'Neuquén': 'c', 'Río Negro': 'c'}
+LABELS = {'Mendoza': (-70.3, -35.7), 'San Juan': (-70.0, -30.3), 'La Rioja': (-65.9, -29.9), 'Catamarca': (-65.9, -27.7), 'Salta': (-64.3, -25.2), 'Neuquén': (-70.6, -38.9), 'Río Negro': (-66.3, -40.3)}
 # (lon, lat, tamaño) — pines ilustrativos
 PINS = [
     (-68.87, -33.03, 9), (-68.79, -32.98, 7), (-68.84, -32.89, 7), (-68.59, -32.72, 6), (-68.47, -33.08, 6), (-68.47, -33.19, 6),
     (-69.15, -33.37, 7), (-69.02, -33.58, 7), (-69.04, -33.77, 6), (-68.33, -34.62, 7), (-67.69, -34.98, 6),
     (-68.53, -31.54, 7), (-68.28, -31.65, 6), (-68.58, -31.68, 6), (-67.49, -29.16, 6),
     (-67.56, -28.06, 6), (-65.98, -26.07, 7),
+    (-68.30, -38.62, 6), (-67.58, -39.03, 6),
 ]
 
 def merc(lat): return math.degrees(math.log(math.tan(math.pi / 4 + math.radians(lat) / 2)))
@@ -62,7 +63,7 @@ for f in sorted(feats, key=lambda f: f['properties']['name']):
 labels = ''.join(f'<text class="lbl" x="{proj(lo, la)[0]:.1f}" y="{proj(lo, la)[1]:.1f}">{n}</text>' for n, (lo, la) in LABELS.items())
 pins = ''.join(f'<circle class="pin-halo" cx="{proj(lo, la)[0]:.1f}" cy="{proj(lo, la)[1]:.1f}" r="{r * 2.2:.0f}"/><circle class="pin" cx="{proj(lo, la)[0]:.1f}" cy="{proj(lo, la)[1]:.1f}" r="{r}"/>' for lo, la, r in PINS)
 svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W:.0f} {H:.0f}" width="{W:.0f}" height="{H:.0f}">
-<title id="ar-map-title">Zonas donde Grupo Tecnolog atiende bodegas e industrias: Mendoza, San Juan, La Rioja, Catamarca y Salta</title>
+<title id="ar-map-title">Zonas donde Grupo Tecnolog atiende bodegas e industrias: Mendoza, San Juan, La Rioja, Catamarca, Salta, Neuquén y Río Negro</title>
 <style>.prov{{fill:#f3f3f3;stroke:#c6c6c6;stroke-width:.8}}.hl-a{{fill:#cdeaf6}}.hl-b{{fill:#e0f2f9}}.hl-c{{fill:#edf7fb}}.lbl{{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;fill:#444;text-anchor:middle}}.pin{{fill:#006690;stroke:#fff;stroke-width:2}}.pin-halo{{fill:#0098cb;opacity:.16}}</style>
 <defs><clipPath id="ar-clip"><rect x="0" y="0" width="{W:.0f}" height="{H:.0f}"/></clipPath><linearGradient id="ar-fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0.86" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="1"/></linearGradient></defs>
 <g clip-path="url(#ar-clip)">{''.join(paths)}</g>
