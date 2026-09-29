@@ -243,5 +243,12 @@
     "s5": "Tubulações em aço inox",
     "s6": "Trocadores de calor, passarelas e estruturas",
     "rights": "Todos os direitos reservados."
+  },
+  "jobs": {
+    "label": "Trabalhe conosco",
+    "text": "Quer fazer parte da equipe? Envie seu currículo para",
+    "note": "Os currículos são recebidos somente nesse endereço.",
+    "subject": "Currículo - Candidatura Grupo Tecnolog",
+    "footer": "Currículos e candidaturas:"
   }
 }

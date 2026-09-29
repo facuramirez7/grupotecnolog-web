@@ -243,5 +243,12 @@
     "s5": "Stainless steel piping",
     "s6": "Heat exchangers, walkways and structures",
     "rights": "All rights reserved."
+  },
+  "jobs": {
+    "label": "Work with us",
+    "text": "Want to join the team? Send your CV to",
+    "note": "Applications are only received at that address.",
+    "subject": "CV - Job application Grupo Tecnolog",
+    "footer": "CVs and applications:"
   }
 }

@@ -456,6 +456,10 @@
               </li>
             </ul>
             <a class="link-map" href="{{const.maps_place|attr}}" target="_blank" rel="noopener">{{contact.directions}}</a>
+            <div class="jobs-note" id="trabaja">
+              <p class="mono-label">{{jobs.label}}</p>
+              <p>{{jobs.text}} <a href="mailto:gianina@grupotecnolog.com?subject={{jobs.subject|url}}">gianina@grupotecnolog.com</a>. {{jobs.note}}</p>
+            </div>
             <div class="map-embed">
               <iframe src="https://www.google.com/maps?q=GRUPO+TECNOLOG+SA%2C+San+Mart%C3%ADn+1652%2C+Luj%C3%A1n+de+Cuyo%2C+Mendoza&amp;z=17&amp;hl={{lang.hl}}&amp;output=embed" title="{{contact.map_title|attr}}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -543,6 +547,7 @@
           <li><a href="mailto:administracion@grupotecnolog.com">administracion@grupotecnolog.com</a></li>
           <li>San Martín 1652, M5507 Luján de Cuyo, Mendoza</li>
           <li><a href="https://www.linkedin.com/company/grupotecnolog" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li>{{jobs.footer}} <a href="mailto:gianina@grupotecnolog.com?subject={{jobs.subject|url}}">gianina@grupotecnolog.com</a></li>
         </ul>
       </div>
     </div>

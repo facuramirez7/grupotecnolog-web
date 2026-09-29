@@ -179,6 +179,11 @@ h3 { font-family: var(--font-body); font-weight: 500; text-transform: uppercase;
 .video-facade:focus-visible { outline: 3px solid var(--color-blue-text); outline-offset: 3px; }
 .video-facade .video-caption { position: absolute; left: 12px; bottom: 12px; font-family: var(--font-mono); font-size: 12px; letter-spacing: -0.03em; text-transform: uppercase; background: var(--color-white); color: var(--color-black); padding: 6px 12px; border-radius: var(--radius-tag); }
 .video-facade.is-playing .play, .video-facade.is-playing .video-caption, .video-facade.is-playing img { display: none; }
+.jobs-note { margin-top: 24px; padding: 20px 24px; background: var(--color-white); border-radius: var(--radius-card-sm); }
+.jobs-note .mono-label { margin-bottom: 8px; }
+.jobs-note p:last-child { margin: 0; font-size: 14px; line-height: 1.4; color: var(--color-slate); }
+.jobs-note a { color: var(--color-black); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.site-footer .footer-contact li a[href^="mailto:gianina"] { overflow-wrap: anywhere; }
 .map-embed { position: relative; margin-top: 24px; aspect-ratio: 16 / 9; border-radius: var(--radius-card-sm); overflow: hidden; background: var(--color-canvas); }
 .map-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .step-card-dark { background: var(--color-dark) !important; color: var(--color-white); }
