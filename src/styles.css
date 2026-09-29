@@ -220,7 +220,18 @@ h3 { font-family: var(--font-body); font-weight: 500; text-transform: uppercase;
 
 /* 7 · Clientes */
 .clients-note { font-size: 18px; font-weight: 500; color: var(--color-black); margin-bottom: 24px; }
-.logo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.clients-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 24px; align-items: start; }
+.logo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.clients-map { margin: 0; background: var(--color-white); border-radius: var(--radius-card); padding: 16px 16px 24px; }
+.ar-map { width: 100%; height: auto; display: block; }
+.clients-map figcaption { padding: 8px 8px 0; }
+.clients-map .mono-label { margin-bottom: 12px; }
+.map-legend { display: grid; gap: 8px; font-size: 14px; line-height: 1.35; color: var(--color-slate); }
+.map-legend li { display: flex; align-items: flex-start; gap: 10px; }
+.map-legend strong { color: var(--color-black); font-weight: 500; }
+.dot { flex: 0 0 12px; width: 12px; height: 12px; border-radius: 50%; margin-top: 4px; border: 1px solid var(--color-ash); }
+.dot-a { background: #cdeaf6; } .dot-b { background: #e0f2f9; } .dot-c { background: #edf7fb; }
+.map-note { margin: 12px 0 0; font-family: var(--font-mono); font-size: 11px; letter-spacing: -0.03em; color: var(--color-steel); }
 .logo-grid li { background: var(--color-white); border-radius: var(--radius-card-sm); min-height: 120px; }
 .logo-grid a { display: flex; align-items: center; justify-content: center; height: 100%; padding: 24px 32px; min-height: 120px; }
 .logo-grid img { max-height: 56px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1); opacity: .8; transition: opacity .2s ease, filter .2s ease; }
@@ -294,7 +305,8 @@ h3 { font-family: var(--font-body); font-weight: 500; text-transform: uppercase;
 /* Responsive */
 @media (max-width: 1024px) {
   .cards-3 { grid-template-columns: 1fr; }
-  .logo-grid { grid-template-columns: repeat(3, 1fr); }
+  .clients-grid { grid-template-columns: 1fr; }
+  .logo-grid { grid-template-columns: repeat(4, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .hero-inner { grid-template-columns: 1fr; }
@@ -322,6 +334,7 @@ h3 { font-family: var(--font-body); font-weight: 500; text-transform: uppercase;
   .hero { padding-top: 16px; }
   .logo-grid { grid-template-columns: repeat(2, 1fr); }
   .logo-grid a { padding: 20px; }
+  .clients-map { padding: 12px 12px 20px; }
   .field-row { grid-template-columns: 1fr; }
   .vendimia-card { padding: 24px; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }

@@ -44,6 +44,10 @@ def render(template, values):
 def main():
     tpl = open(os.path.join(ROOT, 'src/template.html'), encoding='utf-8').read()
     css = open(os.path.join(ROOT, 'src/styles.css'), encoding='utf-8').read()
+    # minificado simple: sin comentarios, sin saltos ni espacios redundantes (el original queda en src/)
+    css = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
+    css = re.sub(r'\s+', ' ', css)
+    css = re.sub(r'\s*([{};:,>])\s*', r'\1', css).replace(';}', '}').strip()
     keys_by_lang = {}
     for lang, cfg in LANGS.items():
         data = json.load(open(os.path.join(ROOT, f'i18n/{lang}.json'), encoding='utf-8'))

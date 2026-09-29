@@ -188,7 +188,15 @@
     "eyebrow": "Our clients",
     "title": "Clients who have <em>trusted us</em>",
     "lead": "Over the years we have supported wineries and industries with tailored, efficient and long-lasting solutions. We are proud to be part of their processes and to keep growing alongside each of them.",
-    "note": "Reliability built by working together. These are some of them."
+    "note": "Reliability built by working together. These are some of them.",
+    "map_title": "Map of western and northern Argentina showing the areas where Grupo Tecnolog serves wineries and industries",
+    "map_label": "Where we work",
+    "map_r1": "Luján de Cuyo, Maipú, Uco Valley, San Rafael and General Alvear",
+    "map_r2_name": "Cuyo region",
+    "map_r2": "San Juan and La Rioja",
+    "map_r3_name": "North",
+    "map_r3": "Catamarca and Salta",
+    "map_note": "Illustrative map of the areas served."
   },
   "harvest": {
     "label": "Rental · Harvest",

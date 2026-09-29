@@ -188,7 +188,15 @@
     "eyebrow": "Nossos clientes",
     "title": "Clientes que confiaram em <em>nós</em>",
     "lead": "Ao longo dos anos, acompanhamos vinícolas e indústrias com soluções personalizadas, eficientes e duradouras. Temos orgulho de fazer parte dos seus processos e de seguir crescendo junto com cada um deles.",
-    "note": "Confiabilidade que se constrói trabalhando juntos. Estes são alguns deles."
+    "note": "Confiabilidade que se constrói trabalhando juntos. Estes são alguns deles.",
+    "map_title": "Mapa do oeste e norte da Argentina com as regiões onde o Grupo Tecnolog atende vinícolas e indústrias",
+    "map_label": "Onde trabalhamos",
+    "map_r1": "Luján de Cuyo, Maipú, Vale de Uco, San Rafael e General Alvear",
+    "map_r2_name": "Região de Cuyo",
+    "map_r2": "San Juan e La Rioja",
+    "map_r3_name": "Norte",
+    "map_r3": "Catamarca e Salta",
+    "map_note": "Mapa ilustrativo das regiões atendidas."
   },
   "harvest": {
     "label": "Locação · Safra",

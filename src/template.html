@@ -401,17 +401,33 @@
           <h2 id="clientes-title">{{clients.title}}</h2>
           <p class="lead">{{clients.lead}}</p>
         </div>
-        <p class="clients-note">{{clients.note}}</p>
-        <ul class="logo-grid" aria-label="{{a11y.clients|attr}}">
-          <li><a href="https://www.chandon.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/chandon.webp" alt="Chandon Argentina" width="195" height="120" loading="lazy"></a></li>
-          <li><a href="https://toro.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/toro.webp" alt="Bodega Toro" width="124" height="31" loading="lazy"></a></li>
-          <li><a href="https://www.norton.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/norton.webp" alt="Bodega Norton" width="210" height="120" loading="lazy"></a></li>
-          <li><a href="https://www.bodegasesmeralda.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/bodegas-esmeralda.webp" alt="Bodegas Esmeralda" width="202" height="50" loading="lazy"></a></li>
-          <li><a href="https://www.lagarde.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/lagarde.webp" alt="Bodega Lagarde" width="241" height="120" loading="lazy"></a></li>
-          <li><a href="https://domainebousquet.com/" target="_blank" rel="noopener"><img src="/assets/logos/domaine-bousquet.webp" alt="Domaine Bousquet" width="223" height="120" loading="lazy"></a></li>
-          <li><a href="https://www.bodegaseptima.com/" target="_blank" rel="noopener"><img src="/assets/logos/bodega-septima.webp" alt="Bodega Séptima" width="198" height="120" loading="lazy"></a></li>
-          <li><a href="https://www.bodegasottano.com/" target="_blank" rel="noopener"><img src="/assets/logos/bodega-sottano.webp" alt="Bodega Sottano" width="121" height="120" loading="lazy"></a></li>
-        </ul>
+        <div class="clients-grid">
+          <div class="clients-logos">
+            <p class="clients-note">{{clients.note}}</p>
+            <ul class="logo-grid" aria-label="{{a11y.clients|attr}}">
+              <li><a href="https://www.chandon.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/chandon.webp" alt="Chandon Argentina" width="195" height="120" loading="lazy"></a></li>
+              <li><a href="https://toro.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/toro.webp" alt="Bodega Toro" width="124" height="31" loading="lazy"></a></li>
+              <li><a href="https://www.norton.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/norton.webp" alt="Bodega Norton" width="210" height="120" loading="lazy"></a></li>
+              <li><a href="https://www.bodegasesmeralda.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/bodegas-esmeralda.webp" alt="Bodegas Esmeralda" width="202" height="50" loading="lazy"></a></li>
+              <li><a href="https://www.lagarde.com.ar/" target="_blank" rel="noopener"><img src="/assets/logos/lagarde.webp" alt="Bodega Lagarde" width="241" height="120" loading="lazy"></a></li>
+              <li><a href="https://domainebousquet.com/" target="_blank" rel="noopener"><img src="/assets/logos/domaine-bousquet.webp" alt="Domaine Bousquet" width="223" height="120" loading="lazy"></a></li>
+              <li><a href="https://www.bodegaseptima.com/" target="_blank" rel="noopener"><img src="/assets/logos/bodega-septima.webp" alt="Bodega Séptima" width="198" height="120" loading="lazy"></a></li>
+              <li><a href="https://www.bodegasottano.com/" target="_blank" rel="noopener"><img src="/assets/logos/bodega-sottano.webp" alt="Bodega Sottano" width="121" height="120" loading="lazy"></a></li>
+            </ul>
+          </div>
+          <figure class="clients-map">
+            <img class="ar-map" src="/assets/img/clients-map.svg" alt="{{clients.map_title|attr}}" width="620" height="813" loading="lazy">
+            <figcaption>
+              <p class="mono-label">{{clients.map_label}}</p>
+              <ul class="map-legend">
+                <li><span class="dot dot-a" aria-hidden="true"></span><strong>Mendoza</strong> · {{clients.map_r1}}</li>
+                <li><span class="dot dot-b" aria-hidden="true"></span><strong>{{clients.map_r2_name}}</strong> · {{clients.map_r2}}</li>
+                <li><span class="dot dot-c" aria-hidden="true"></span><strong>{{clients.map_r3_name}}</strong> · {{clients.map_r3}}</li>
+              </ul>
+              <p class="map-note">{{clients.map_note}}</p>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 

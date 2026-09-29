@@ -188,7 +188,15 @@
     "eyebrow": "Nuestros clientes",
     "title": "Clientes que han confiado en <em>nosotros</em>",
     "lead": "A lo largo de los años, hemos acompañado a bodegas e industrias con soluciones personalizadas, eficientes y duraderas. Nos enorgullece ser parte de sus procesos y seguir creciendo junto a cada uno de ellos.",
-    "note": "Confiabilidad que se construye trabajando juntos. Estos son algunos de ellos."
+    "note": "Confiabilidad que se construye trabajando juntos. Estos son algunos de ellos.",
+    "map_title": "Mapa del oeste y norte de Argentina con las zonas donde Grupo Tecnolog atiende bodegas e industrias",
+    "map_label": "Dónde trabajamos",
+    "map_r1": "Luján de Cuyo, Maipú, Valle de Uco, San Rafael y General Alvear",
+    "map_r2_name": "Cuyo",
+    "map_r2": "San Juan y La Rioja",
+    "map_r3_name": "Norte",
+    "map_r3": "Catamarca y Salta",
+    "map_note": "Mapa ilustrativo de las zonas atendidas."
   },
   "harvest": {
     "label": "Alquiler · Vendimia",
